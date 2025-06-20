@@ -2,15 +2,15 @@ var mysql = require('mysql2/promise');
 
 let db;
 
-const pool = mysql.createPool({
-    host: 'localhost',
+(async () => {
+  try {
+    // Connect to the database
+    db = await mysql.createConnection({
+      host: 'localhost',
       user: 'root',
       password: '',
       database: 'DogWalkService'
-});
-
-(async () => {
-  try {
+    });
 
     // Insert data if Users is empty
     var [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
