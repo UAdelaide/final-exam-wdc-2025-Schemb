@@ -84,7 +84,7 @@ let db;
 /* GET dogs page. */
 router.get('/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.execute(`SELECT Dogs.name, Dogs.size, rental.rental_date FROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id`);
+    const [dogs] = await db.execute(`SELECT Dogs.name, Dogs.size, Users.username FROM rental INNER JOIN customer ON rental.customer_id = customer.customer_id`);
     res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
