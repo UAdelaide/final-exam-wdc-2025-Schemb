@@ -35,3 +35,4 @@ VALUES ('deanweb', 'dean@example.com', 'password123', 'walker');
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
 VALUES ('josephs', 'joseph@example.com', 'password456', 'owner');
 
+-- Dogs Insert Into
