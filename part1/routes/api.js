@@ -91,6 +91,7 @@ router.get('/dogs', async (req, res) => {
   }
 });
 
+/* GET open wal page. */
 router.get('/walkrequests/open', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
