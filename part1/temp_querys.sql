@@ -44,3 +44,6 @@ SELECT `user_id`, 'Bella', 'small' FROM `Users` WHERE `username` = 'carol123' AN
 
 INSERT INTO `Dogs` (`owner_id`, `name`, `size`)
 SELECT `user_id`, 'Luna', 'medium' FROM `Users` WHERE `username` = 'josephs' AND `role` = 'owner' LIMIT 1;
+
+INSERT INTO `Dogs` (`owner_id`, `name`, `size`)
+SELECT `user_id`, 'Luna', 'medium' FROM `Users` WHERE `username` = 'josephs' AND `role` = 'owner' LIMIT 1;
