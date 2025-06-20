@@ -64,7 +64,29 @@ let db;
         SELECT user_id, 'Pipsqueak', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
       `);
 
-      
+      // Insert data if Dogs is empty
+    [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    if (rows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
+      `);
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
+      `);
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Luna', 'medium' FROM Users WHERE username = 'josephs' AND role = 'owner' LIMIT 1
+      `);
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Clifford', 'large' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
+      `);
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Pipsqueak', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
+      `);
     }
   } catch (err) {
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
