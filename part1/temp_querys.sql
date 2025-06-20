@@ -20,16 +20,16 @@
 -- ** You do not need to hash the password, just literally use the ones given and pretend they are already hashed. E.g. in password hash, ‘hashed123’ should be placed.
 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
-VALUES ('alice123', 'alice@example.com', 'hashed123', owner);
+VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
-VALUES ('bobwalker', 'bob@example.com', 'hashed456', walker);
+VALUES ('bobwalker', 'bob@example.com', 'hashed456', 'walker');
 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
-VALUES ('carol123', 'carol@example.com', 'hashed789', owner);
+VALUES ('carol123', 'carol@example.com', 'hashed789', 'owner');
 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
-VALUES ('deanweb', 'dean@example.com', 'password123', walker);
+VALUES ('deanweb', 'dean@example.com', 'password123', 'walker');
 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
-VALUES ('josephs', 'joseph@example.com', 'password456', owner);
+VALUES ('josephs', 'joseph@example.com', 'password456', 'owner');
