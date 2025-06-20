@@ -47,6 +47,10 @@ let db;
         INSERT INTO Dogs (owner_id, name, size)
         SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
       `);
+      await db.execute(`
+        INSERT INTO Dogs (owner_id, name, size)
+        SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
+      `);
     }
   } catch (err) {
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
