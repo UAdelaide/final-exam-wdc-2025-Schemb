@@ -84,7 +84,7 @@ let db;
 /* GET dogs page. */
 router.get('/dogs', async (req, res) => {
   try {
-    const [dogs] = await db.execute('SELECT * FROM Dogs');
+    const [dogs] = await db.execute(`SELECT * FROM Dogs`);
     res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
@@ -94,7 +94,7 @@ router.get('/dogs', async (req, res) => {
 /* GET open walk requests page. */
 router.get('/walkrequests/open', async (req, res) => {
   try {
-    const [openWalkRequests] = await db.execute('SELECT * FROM WalkRequests WHERE status = open');
+    const [openWalkRequests] = await db.execute(`SELECT * FROM WalkRequests WHERE status = 'open'`);
     res.json(openWalkRequests);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch open walk requests' });
