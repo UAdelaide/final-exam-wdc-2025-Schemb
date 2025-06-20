@@ -53,4 +53,4 @@ SELECT `user_id`, 'Pipsqueak', 'small' FROM `Users` WHERE `username` = 'carol123
 
 -- WalkRequests Insert Into
 INSERT INTO `WalkRequests` (`dog_id`, `requested_time`, `duration_minutes`, `location`, `status`)
-SELECT `
+SELECT `dog_id`, 
