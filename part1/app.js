@@ -35,7 +35,8 @@ let db;
         ('alice123', 'alice@example.com', 'hashed123', 'owner'),
         ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
         ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-        
+        ('deanweb', 'dean@example.com', 'password123', 'walker'),
+        ('josephs', 'joseph@example.com', 'password456', 'owner')
       `);
     }
   } catch (err) {
