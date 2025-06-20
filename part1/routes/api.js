@@ -77,10 +77,10 @@ let db;
       `);
 
       // Insert data if WalkRatings is empty
-    [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
+    [rows] = await db.execute('SELECT COUNT(*) AS count FROM WaklRatings');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        INSERT INTO WalkRatings (dog_id, requested_time, duration_minutes, location, status)
         SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
