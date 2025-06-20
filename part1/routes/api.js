@@ -81,7 +81,7 @@ let db;
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
         (4, 2, 1, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!')
       `);
     }
@@ -113,7 +113,7 @@ router.get('/walkrequests/open', async (req, res) => {
 /* GET open walkers summary page. */
 router.get('/walkers/summary', async (req, res) => {
   try {
-    const [openWalkRequests] = await db.execute(`SELECT Users.username AS walker_username, total_ratings, average_rating, completed_walks FROM Users INNER JOIN WalkRatings ON Users.user_id AS curr_user_id = WalkRatings.walker_id WHERE total_ratings = (SELECT COUNT(*) FROM WalkRatings WHERE walker_id = curr_user_id)`);
+    const [openWalkRequests] = await db.execute(`SELECT Users.username AS walker_username, total_ratings FROM Users INNER JOIN WalkRatings ON Users.user_id AS curr_user_id = WalkRatings.walker_id WHERE total_ratings = (SELECT COUNT(*) FROM WalkRatings WHERE walker_id = curr_user_id)`);
     res.json(openWalkRequests);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch walkers summary' });
