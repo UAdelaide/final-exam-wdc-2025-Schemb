@@ -113,7 +113,7 @@ router.get('/walkrequests/open', async (req, res) => {
 /* GET open walkers summary page. */
 router.get('/walkers/summary', async (req, res) => {
   try {
-    const [openWalkRequests] = await db.execute(`SELECT Users.username AS walker_username, total_ratings, average_rating, completed_walks FROM WalkRatings INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE WalkRequests.status = 'open'`);
+    const [openWalkRequests] = await db.execute(`SELECT Users.username AS walker_username, total_ratings, average_rating, completed_walks FROM WalkRatings INNER JOIN Users ON WalkRequests.dog_id = Dogs.dog_id INNER JOIN Users ON Dogs.owner_id = Users.user_id WHERE WalkRequests.status = 'open'`);
     res.json(openWalkRequests);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch walkers summary' });
