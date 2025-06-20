@@ -38,7 +38,7 @@ let db;
       `);
     }
   } catch (err) {
-    console.error('Error setting up database. Ensure dogwalks.sql is loaded into mysql', err);
+    console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
   }
 })();
 
