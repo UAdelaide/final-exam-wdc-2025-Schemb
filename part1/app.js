@@ -73,20 +73,20 @@ let db;
         SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
-        INSERT INTO Dogs (owner_id, name, size)
-        SELECT user_id, 'Bella', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
-        INSERT INTO Dogs (owner_id, name, size)
-        SELECT user_id, 'Luna', 'medium' FROM Users WHERE username = 'josephs' AND role = 'owner' LIMIT 1
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
-        INSERT INTO Dogs (owner_id, name, size)
-        SELECT user_id, 'Clifford', 'large' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
-        INSERT INTO Dogs (owner_id, name, size)
-        SELECT user_id, 'Pipsqueak', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
+        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
+        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
     }
   } catch (err) {
