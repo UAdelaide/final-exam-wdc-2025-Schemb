@@ -57,7 +57,7 @@ let db;
       `);
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
-        SELECT user_id, 'Max', 'medium' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
+        SELECT user_id, 'Clifford', 'large' FROM Users WHERE username = 'alice123' AND role = 'owner' LIMIT 1
       `);
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
