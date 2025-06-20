@@ -77,7 +77,16 @@ let db;
       `);
     }
 
-      // Insert data if WalkRatings is empty
+    // Insert data if WalkRatings is empty
+    [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+    if (rows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
+        (4, 2, 1, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!')
+      `);
+    }
+
+    // Insert data if Walk is empty
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (rows[0].count === 0) {
       await db.execute(`
