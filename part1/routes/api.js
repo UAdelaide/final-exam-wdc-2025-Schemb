@@ -83,22 +83,6 @@ let db;
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
         SELECT WalkRequests.request_id, Users.user_id, Dogs.owner_id, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!' FROM WalkRequests INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id LIMIT 1
       `);
-      await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted' FROM Dogs WHERE name = 'Bella' LIMIT 1
-      `);
-      await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '2025-06-21 16:30:00', 60, 'North Terrace', 'accepted' FROM Dogs WHERE name = 'Luna' LIMIT 1
-      `);
-      await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '1963-10-03 6:15:00', 10, 'Birdwell Island', 'completed' FROM Dogs WHERE name = 'Clifford' LIMIT 1
-      `);
-      await db.execute(`
-        INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, NOW(), 1, 'Tinyville', 'cancelled' FROM Dogs WHERE name = 'Pipsqueak' LIMIT 1
-      `);
     }
   } catch (err) {
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
