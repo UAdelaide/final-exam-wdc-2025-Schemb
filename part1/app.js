@@ -63,7 +63,7 @@ let db;
         INSERT INTO Dogs (owner_id, name, size)
         SELECT user_id, 'Pipsqueak', 'small' FROM Users WHERE username = 'carol123' AND role = 'owner' LIMIT 1
       `);
-    
+    }
 
       // Insert data if Dogs is empty
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
