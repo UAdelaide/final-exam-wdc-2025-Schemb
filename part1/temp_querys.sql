@@ -59,4 +59,4 @@ INSERT INTO `WalkRequests` (`dog_id`, `requested_time`, `duration_minutes`, `loc
 SELECT `dog_id`, '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted' FROM `Dogs` WHERE `name` = 'Bella' LIMIT 1;
 
 INSERT INTO `WalkRequests` (`dog_id`, `requested_time`, `duration_minutes`, `location`, `status`)
-SELECT `dog_id`, '2025-06-21 16:30:00', 60, 'Beachside Ave', 'accepted' FROM `Dogs` WHERE `name` = 'Bella' LIMIT 1;
+SELECT `dog_id`, '2025-06-21 16:30:00', 60, 'North Terrace', 'accepted' FROM `Dogs` WHERE `name` = 'Luna' LIMIT 1;
