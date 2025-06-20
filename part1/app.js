@@ -27,7 +27,7 @@ let db;
       database: 'DogWalkService'
     });
 
-    // Insert data if users is empty
+    // Insert data if Users is empty
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
@@ -40,7 +40,7 @@ let db;
       `);
     }
 
-    // Insert data if users is empty
+    // Insert data if Dogs is empty
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
       await db.execute(`
