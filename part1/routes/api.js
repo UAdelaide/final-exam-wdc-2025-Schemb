@@ -90,7 +90,7 @@ let db;
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkApplications');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkApplications (request_id, walker_id, owner_id, rating, comments) VALUES
+        INSERT INTO WalkApplications (request, walker_id, owner_id, rating, comments) VALUES
         (4, 2, 1, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!')
       `);
     }
