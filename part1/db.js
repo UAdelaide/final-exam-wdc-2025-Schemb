@@ -1,3 +1,5 @@
+var mysql = require('mysql2/promise');
+
 let db;
 
 (async () => {
