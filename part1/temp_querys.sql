@@ -51,4 +51,4 @@ SELECT `user_id`, 'Clifford', 'large' FROM `Users` WHERE `username` = 'alice123'
 INSERT INTO `Dogs` (`owner_id`, `name`, `size`)
 SELECT `user_id`, 'Pipsqueak', 'small' FROM `Users` WHERE `username` = 'carol123' AND `role` = 'owner' LIMIT 1;
 
-WalkRequests Insert Into
+-- WalkRequests Insert Into
