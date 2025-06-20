@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET dogs page. */
-router.get('/', async (req, res) => {
+router.get('/dogs', async (req, res) => {
   try {
     const [dogs] = await db.execute('SELECT * FROM Dogs');
     res.json(dogs);
