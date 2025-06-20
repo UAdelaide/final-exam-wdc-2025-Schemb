@@ -37,4 +37,4 @@ VALUES ('josephs', 'joseph@example.com', 'password456', 'owner');
 
 -- Dogs Insert Into
 INSERT INTO `Dogs` (`owner_id`, `name`, `size`)
-SELECT `owner_id`
+SELECT `owner_id`, ''
