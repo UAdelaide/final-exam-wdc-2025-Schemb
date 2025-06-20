@@ -78,3 +78,5 @@ let db;
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
   }
 })();
+
+module.exports pool;
