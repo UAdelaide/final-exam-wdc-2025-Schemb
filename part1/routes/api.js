@@ -77,13 +77,13 @@ let db;
       `);
 
       // Insert data if WalkRatings is empty
-      [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
-      if (rows[0].count === 0) {
-        await db.execute(`
-          INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
-          SELECT WalkRequests.request_id, Users.user_id, Dogs.owner_id, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!' FROM WalkRequests INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id LIMIT 1
-        `);
-      }
+    [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
+    if (rows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
+        SELECT WalkRequests.request_id, Users.user_id, Dogs.owner_id, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!' FROM WalkRequests INNER JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id LIMIT 1
+      `);
+    }
     }
   } catch (err) {
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
