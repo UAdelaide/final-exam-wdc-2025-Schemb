@@ -76,7 +76,7 @@ let db;
         SELECT dog_id, NOW(), 1, 'Tinyville', 'cancelled' FROM Dogs WHERE name = 'Pipsqueak' LIMIT 1
       `);
 
-      // Insert data if WalkRequests is empty
+      // Insert data if WalkRatings is empty
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM Dogs');
     if (rows[0].count === 0) {
       await db.execute(`
