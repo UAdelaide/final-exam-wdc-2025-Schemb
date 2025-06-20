@@ -70,7 +70,7 @@ let db;
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM `Dogs` WHERE `name` = 'Max' LIMIT 1
+        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
         INSERT INTO Dogs (owner_id, name, size)
