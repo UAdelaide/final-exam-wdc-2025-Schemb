@@ -81,7 +81,7 @@ let db;
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
-        SELECT WalkRequests.request_id, Users.user_id, Dogs.owner_id, 5, 'Bob has been lovely to our pup. He always shows up with a treat in his hat!' FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id LIMIT 1
+        SELECT WalkRequests.request_id, Users.user_id, Dogs.owner_id, 5, 'Bob has been lovely to our pup. He always shows up with a treat in his hat!' FROM WalkRequests INNER JOIN Users ON Dogs.owner_id = Users.user_id LIMIT 1
       `);
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
