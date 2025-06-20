@@ -19,6 +19,7 @@
 -- Three more walk requests with details of your choosing.
 -- ** You do not need to hash the password, just literally use the ones given and pretend they are already hashed. E.g. in password hash, ‘hashed123’ should be placed.
 
+-- 
 INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
 VALUES ('alice123', 'alice@example.com', 'hashed123', 'owner');
 
