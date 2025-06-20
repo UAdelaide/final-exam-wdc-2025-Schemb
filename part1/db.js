@@ -2,6 +2,13 @@ var mysql = require('mysql2/promise');
 
 let db;
 
+const pool = mysql.createPool({
+    host: 'localhost', // location
+    user: 'catshop', // username
+    //password: 'cats123', // password for user
+    database: 'everythingCats_shop' // database name
+});
+
 (async () => {
   try {
     // Connect to the database
