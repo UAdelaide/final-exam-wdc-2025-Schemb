@@ -86,7 +86,7 @@ let db;
       `);
     }
 
-    // Insert data if Walk is empty
+    // Insert data if WalkApplications is empty
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (rows[0].count === 0) {
       await db.execute(`
