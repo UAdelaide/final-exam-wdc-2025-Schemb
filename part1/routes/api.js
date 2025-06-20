@@ -4,8 +4,8 @@ var router = express.Router();
 /* GET dogs page. */
 router.get('/', async (req, res) => {
   try {
-    const [dogs] = await db.execute('SELECT * FROM books');
-    res.json(books);
+    const [dogs] = await db.execute('SELECT * FROM Dogs');
+    res.json(dogs);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
