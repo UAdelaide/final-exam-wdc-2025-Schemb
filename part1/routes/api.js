@@ -94,7 +94,7 @@ router.get('/dogs', async (req, res) => {
 /* GET open walk requests page. */
 router.get('/walkrequests/open', async (req, res) => {
   try {
-    const [openWalkRequests] = await db.execute(`SELECT * FROM WalkRequests WHERE status = 'open'`);
+    const [openWalkRequests] = await db.execute(`SELECT Dogs.name AS dog_name, Dogs.size, Users.username AS owner_username FROM Dogs INNER JOIN Users ON Dogs.owner_id = Users.user_id`);
     res.json(openWalkRequests);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch open walk requests' });
