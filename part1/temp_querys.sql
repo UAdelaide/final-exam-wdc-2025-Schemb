@@ -36,3 +36,4 @@ INSERT INTO `Users` (`username`, `email`, `password_hash`, `role`)
 VALUES ('josephs', 'joseph@example.com', 'password456', 'owner');
 
 -- Dogs Insert Into
+INSERT INTO `
