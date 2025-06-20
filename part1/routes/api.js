@@ -77,7 +77,7 @@ let db;
       `);
 
       // Insert data if WalkRatings is empty
-    [rows] = await db.execute('SELECT COUNT(*) AS count FROM WaklRatings');
+    [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkRatings (dog_id, requested_time, duration_minutes, location, status)
