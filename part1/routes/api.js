@@ -80,7 +80,7 @@ let db;
     [rows] = await db.execute('SELECT COUNT(*) AS count FROM WalkRatings');
     if (rows[0].count === 0) {
       await db.execute(`
-        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments, rated_at)
+        INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
         SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
       `);
       await db.execute(`
