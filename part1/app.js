@@ -39,6 +39,19 @@ let db;
         ('josephs', 'joseph@example.com', 'password456', 'owner')
       `);
     }
+
+    // Insert data if users is empty
+    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
+    if (rows[0].count === 0) {
+      await db.execute(`
+        INSERT INTO Users (username, email, password_hash, role) VALUES
+        ('alice123', 'alice@example.com', 'hashed123', 'owner'),
+        ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
+        ('carol123', 'carol@example.com', 'hashed789', 'owner'),
+        ('deanweb', 'dean@example.com', 'password123', 'walker'),
+        ('josephs', 'joseph@example.com', 'password456', 'owner')
+      `);
+    }
   } catch (err) {
     console.error('Error connecting to database. Ensure dogwalks.sql is loaded into MySQL.', err);
   }
