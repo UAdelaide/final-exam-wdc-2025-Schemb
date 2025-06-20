@@ -11,6 +11,7 @@ const pool = mysql.createPool({
 
 (async () => {
   try {
+
     // Insert data if Users is empty
     var [rows] = await db.execute('SELECT COUNT(*) AS count FROM Users');
     if (rows[0].count === 0) {
@@ -78,4 +79,4 @@ const pool = mysql.createPool({
   }
 })();
 
-module.exports = pool;
+module.exports pool;
