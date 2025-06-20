@@ -78,11 +78,11 @@ let db;
       `);
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '2025-06-21 16:30:00', 60, 'North Terrace', 'accepted' FROM `Dogs` WHERE `name` = 'Luna' LIMIT 1
+        SELECT dog_id, '2025-06-21 16:30:00', 60, 'North Terrace', 'accepted' FROM Dogs WHERE name = 'Luna' LIMIT 1
       `);
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
-        SELECT dog_id, '2025-06-10 08:00:00', 30, 'Parklands', 'open' FROM Dogs WHERE name = 'Max' LIMIT 1
+        SELECT dog_id`, '1963-10-03 6:15:00', 10, 'Birdwell Island', 'completed' FROM `Dogs` WHERE `name` = 'Clifford' LIMIT 1
       `);
       await db.execute(`
         INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status)
