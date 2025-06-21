@@ -2,16 +2,7 @@
 const vueinst = Vue.createApp({
     data() {
         return {
-            id: 0,
-            username: '',
-            email: '',
-            password: '',
-            address: '',
-            avatar: '/images/blank-profile-picture.png',
-            errorMessage: '',
-            cart: 0,
-            manager: false,
-            loggedIn: false
+            dogImageLink
         };
     }
 }).mount('body');
