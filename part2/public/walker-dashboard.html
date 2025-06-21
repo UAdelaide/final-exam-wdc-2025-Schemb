@@ -79,10 +79,12 @@
           }
         }
         async function getCurrentUser() {
-          await fetch('/api/users/me', {
+          const response = await fetch('/api/users/me', {
               method: 'GET',
               credentials: 'include'
           });
+
+          this.requestId = 
         }
 
 
