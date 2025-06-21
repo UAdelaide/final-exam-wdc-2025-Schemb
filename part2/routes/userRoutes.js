@@ -82,8 +82,7 @@ router.post('/logout', async (req, res) => {
 
 router.get('/fetchDogs', async (req, res) => {
   const [rows] = await db.query(`
-      SELECT Dogs.name FROM Dogs
-      WHERE username = ? AND password_hash = ?
+      SELECT Dogs.name FROM Dogs INNER JOIN 
     `, [username, password]);
 
     if (rows.length === 0) {
