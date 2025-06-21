@@ -17,12 +17,10 @@
         <label for="username">Username</label>
         <input v-model="username" type="text" placeholder="John Doe" required>
 
-      <div class="form-group">
         <label for="password">Password</label>
         <input v-model="password" type="password" placeholder="••••••••" required>
-      </div>
 
-      <button type="submit" class="signin-btn">Sign In</button>
+      <button type="submit">Sign In</button>
 
       <p class="error-message" v-if="errorMessage">{{ errorMessage }}</p>
     </form>
