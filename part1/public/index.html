@@ -10,7 +10,7 @@
 <body>
     <h1>Dog of the day!</h1>
     <img :src="dogImages || '/images/cat.png'" alt="Dog of the day" height="300" title="Dog of the day">
-    <div v-if="address === null">
+    <div v-if="dogImage != ''">
         <p>Dog name: {{ dogName }}</p>
         <p>Dog size: {{ dogSize }}</p>
     </div>
