@@ -25,6 +25,9 @@ const vueinst = Vue.createApp({
                 return;
             }
 
+            const data = await response.json();
+            this.dogImage = data.message;
+            this.status = data.status;
             this.errorMessage = '';
         } catch (error) {
             this.errorMessage = 'Could not fetch dog of the day. Please bring more treats.';
