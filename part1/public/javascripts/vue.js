@@ -1,7 +1,7 @@
 const vueinst = Vue.createApp({
     data() {
         return {
-
+            dogImage: ''
         };
     },
     methods: {
