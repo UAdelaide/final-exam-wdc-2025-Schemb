@@ -6,7 +6,9 @@ const vueinst = Vue.createApp({
         };
     },
     methods: {
-        async fetchDog
+        async fetchDog() {
+            
+        }
     }
 }).mount('body');
 window.vm = vueinst;
