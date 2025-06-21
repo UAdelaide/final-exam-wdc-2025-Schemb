@@ -63,6 +63,9 @@
               this.role = data.user.role;
               this.errorMessage = '';
 
+              if (this.role == 'owner') {
+                
+              }
               window.location.href = '/owner-dashboard.html';
           } catch (error) {
               this.errorMessage = 'Could not fetch users. Please try again later.';
