@@ -80,6 +80,6 @@ router.post('/logout', async (req, res) => {
   });
 });
 
-router.get()
+router.get('/fetchDogs', async (req, res))
 
 module.exports = router;
