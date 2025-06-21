@@ -6,6 +6,8 @@ var session = require('express-session');
 // Create the express session
 router.use(session({
   secret: 'DogsAreAwesome',
+  resave: false,
+  saveUninitialized: false,
   cookie: {
     secure: false,
     httpOnly: false
@@ -58,8 +60,6 @@ router.post('/login', async (req, res) => {
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
-
-    req.session.username = username;
 
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
