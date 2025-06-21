@@ -53,10 +53,10 @@
               this.role = data.user.role;
 
               this.errorMessage = '';
+              Cookies.set('sessionCookie', JSON.stringify({this.userId, this.username, this.role}));
           } catch (error) {
               this.errorMessage = 'Could not fetch users. Please try again later.';
           }
-          Cookies.set('sessionCookie', JSON.stringify({userId, username, role}));
         }
       }
     }).mount('#app');
