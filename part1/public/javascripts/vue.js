@@ -17,7 +17,7 @@ const vueinst = Vue.createApp({
                     })
                 });
             } catch (error) {
-                this.errorMessage = 'Server error. Please try again later.';
+                this.errorMessage = 'Could not fetch . Please try again later.';
             }
         }
     }
