@@ -35,7 +35,7 @@
       },
       methods: {
         async login() {
-          Cookies.set()
+          Cookies.set(sessionCookie, user)
         }
       }
     }).mount('#app');
