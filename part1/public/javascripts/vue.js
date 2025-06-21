@@ -2,7 +2,7 @@
 const vueinst = Vue.createApp({
     data() {
         return {
-            dogImageLink
+            dogImageLink: 'https://dog.ceo/api/breeds/image/random'
         };
     }
 }).mount('body');
