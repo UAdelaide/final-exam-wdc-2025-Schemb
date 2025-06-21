@@ -159,7 +159,7 @@
           }
 
           const data = await response.json();
-          
+          this.dogs = data;
         } catch (error) {
           console.log('Could not load dogs.');
         }
