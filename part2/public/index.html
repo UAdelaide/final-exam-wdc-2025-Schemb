@@ -51,13 +51,10 @@
                 });
 
               if (!response.ok) {
-                  console.log("Error");
                   const errorData = await response.json();
                   this.errorMessage = errorData.message || 'An error occurred.';
                   return;
               }
-
-              console.log("Pass");
 
               const data = await response.json();
               this.userId = data.user.user_id;
