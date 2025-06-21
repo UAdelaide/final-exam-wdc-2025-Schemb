@@ -3,7 +3,7 @@ const vueinst = Vue.createApp({
     data() {
         return {
             dogImage: '',
-            status
+            status: '',
             errorMessage: ''
         };
     },
@@ -14,7 +14,7 @@ const vueinst = Vue.createApp({
             const response = await fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'GET',
                 body: JSON.stringify({
-                        message: this.dogImage
+                        message: this.dogImage,
                         status: this.status
                 })
             });
