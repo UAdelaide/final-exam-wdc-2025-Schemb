@@ -81,8 +81,8 @@ router.post('/logout', async (req, res) => {
 });
 
 router.get('/fetchDogs', async (req, res) => {
-  
-  const [rows] = await db.query(`
+  try {
+    const [rows] = await db.query(`
       SELECT Dogs.name FROM Dogs INNER JOIN Users AT Dogs.owner_id = Users.user_id WHERE Users.user_id = ?
     `, [req.session.user_id]);
 
