@@ -8,7 +8,7 @@ const vueinst = Vue.createApp({
     },
     // Vue functions
     methods: {
-        // Function to fetch the Dog CEO 
+        // Function to fetch the Dog CEO API
         async fetchDog() {
             try {
                 const response = await fetch('https://dog.ceo/api/breeds/image/random', {
