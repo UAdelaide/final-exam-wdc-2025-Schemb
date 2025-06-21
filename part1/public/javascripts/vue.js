@@ -11,13 +11,7 @@ const vueinst = Vue.createApp({
     async mounted() {
         // Fetch the Dog CEO API
         try {
-            const response = await fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'GET',
-                body: JSON.stringify({
-                        dogImage: this.message,
-                        status: this.status
-                })
-            });
+            const response = await fetch('https://dog.ceo/api/breeds/image/random');
 
             if (!response.ok) {
                 const errorData = await response.json();
