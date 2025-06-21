@@ -3,6 +3,7 @@ const vueinst = Vue.createApp({
     data() {
         return {
             dogImage: '',
+            status
             errorMessage: ''
         };
     },
@@ -14,6 +15,7 @@ const vueinst = Vue.createApp({
                 method: 'GET',
                 body: JSON.stringify({
                         message: this.dogImage
+                        status: this.status
                 })
             });
 
