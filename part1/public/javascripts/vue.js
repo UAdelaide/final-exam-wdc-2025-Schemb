@@ -78,25 +78,6 @@ const vueinst = Vue.createApp({
                 this.errorMessage = 'Username not found!';
             }
         }
-    },
-    async mounted() {
-        try {
-        const response = await fetch('/session', {
-            credentials: 'include'
-        });
-            const data = await response.json();
-
-            this.id = data.id;
-            this.username = data.username;
-            this.email = data.email;
-            this.address = data.address;
-            this.avatar = data.avatar;
-            this.cart = data.cart;
-            this.manager = data.manager;
-            this.loggedIn = data.loggedIn;
-        } catch (err) {
-            console.error('Failed to check session:', err);
-        }
     }
 }).mount('body');
 window.vm = vueinst;
