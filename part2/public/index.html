@@ -35,6 +35,22 @@
       },
       methods: {
         async login() {
+          try {
+              const response = await fetch('/');
+
+              if (!response.ok) {
+                  const errorData = await response.json();
+                  this.errorMessage = errorData.message || 'An error occurred.';
+                  return;
+              }
+
+              const data = await response.json();
+              this.dogImage = data.message;
+
+              this.errorMessage = '';
+          } catch (error) {
+              this.errorMessage = 'Could not fetch dog of the day. Please bring more treats.';
+          }
           Cookies.set('sessionCookie', user_id);
         }
       }
