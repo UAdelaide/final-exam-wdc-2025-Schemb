@@ -14,9 +14,8 @@
         <p>Dog name: {{ dogName }}</p>
         <p>Dog size: {{ dogSize }}</p>
     </div>
-    <div v-if="dogImage != ''">
-        <p>Dog name: {{ dogName }}</p>
-        <p>Dog size: {{ dogSize }}</p>
+    <div v-if="errorMessage != ''">
+        <p>{{ errorMessage }}</p>
     </div>
 </body>
 </html>
