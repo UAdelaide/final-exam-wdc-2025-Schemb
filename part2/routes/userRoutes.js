@@ -4,8 +4,8 @@ const db = require('../models/db');
 var session = require('express-session');
 
 // Create the express session
-app.use(session({
-  secret: 'EXPRESS_SECRET',
+router.use(session({
+  secret: 'DogsAreAwesome',
   resave: false,
   saveUninitialized: false,
   cookie: {
