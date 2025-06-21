@@ -54,6 +54,7 @@
               this.errorMessage = '';
 
               Cookies.set('sessionCookie', JSON.stringify({userId: this.userId, username: this.username, role: this.role}));
+              window.location.href = '/';
           } catch (error) {
               this.errorMessage = 'Could not fetch users. Please try again later.';
           }
