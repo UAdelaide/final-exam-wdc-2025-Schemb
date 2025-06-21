@@ -12,7 +12,7 @@ const vueinst = Vue.createApp({
     async mounted() {
         // Fetch the Dog CEO API
         try {
-            const response = await fetch('https://dog.ceo/api/breeds/image/random');
+            const response = await fetch('https://dog.ceo/api/breeds/image/randon');
 
             if (!response.ok) {
                 const errorData = await response.json();
