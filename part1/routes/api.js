@@ -91,7 +91,7 @@ let db;
     if (rows[0].count === 0) {
       await db.execute(`
         INSERT INTO WalkApplications (request_id, walker_id, status) VALUES
-        (4, 2, 1, 5, 'Bob has been lovely to our big red dog. He always shows up with a treat in his hat!')
+        ()
       `);
     }
   } catch (err) {
