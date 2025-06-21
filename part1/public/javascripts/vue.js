@@ -23,7 +23,7 @@ const vueinst = Vue.createApp({
 
                 this.errorMessage = '';
             } catch (error) {
-                this.errorMessage = 'Could not fetch dog of the day. Please try again later.';
+                this.errorMessage = 'Could not fetch dog of the day. Please bring more treats.';
             }
         }
     }
