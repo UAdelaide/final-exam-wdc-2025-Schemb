@@ -45,13 +45,13 @@
               }
 
               const data = await response.json();
-              this.user = data.message;
+              this.userId = data.message;
 
               this.errorMessage = '';
           } catch (error) {
               this.errorMessage = 'Could not fetch users. Please try again later.';
           }
-          Cookies.set('sessionCookie', user_id);
+          Cookies.set('sessionCookie', userId);
         }
       }
     }).mount('#app');
