@@ -167,5 +167,4 @@ section {
 .right {
     flex: auto;
     float: right;
-    float: inline-end;
 }
