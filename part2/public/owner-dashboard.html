@@ -26,7 +26,7 @@
           <div class="mb-3">
             <label class="form-label">Select Your Dog</label>
             <select id="owned_dogs">
-              <option v-for="dog in dogs" :key="dogs">{{ dog }}</option>
+              <option v-for="dog in dogs">{{ dog }}</option>
             </select>
           </div>
           <div class="mb-3">
@@ -81,7 +81,7 @@
           requested_time: '',
           duration_minutes: '',
           location: '',
-          dogs: ['test']
+          dogs: []
         });
 
         const walks = ref([]);
