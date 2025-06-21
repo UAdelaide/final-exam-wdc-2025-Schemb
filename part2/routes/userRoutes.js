@@ -6,8 +6,6 @@ var session = require('express-session');
 // Create the express session
 router.use(session({
   secret: 'DogsAreAwesome',
-  resave: false,
-  saveUninitialized: false,
   cookie: {
     secure: false,
     httpOnly: false
