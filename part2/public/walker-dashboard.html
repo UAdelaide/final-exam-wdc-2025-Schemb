@@ -79,7 +79,10 @@
           }
         }
         async function getCurrentUser() {
-          
+          await fetch('/api/users/me', {
+              method: 'POST',
+              credentials: 'include'
+          });
         }
 
 
