@@ -146,7 +146,7 @@
       },
       async mounted() {
         try {
-          fetch('/api/users/fetchDogs', {
+          const response = await fetch('/api/users/fetchDogs', {
               method: 'GET',
               credentials: 'include'
           });
