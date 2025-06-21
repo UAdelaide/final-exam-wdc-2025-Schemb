@@ -133,9 +133,7 @@
         };
       },
       methods: {
-        async toggleUser() {
-            this.loggedIn = false;
-
+        async logout() {
             await fetch('/logout', {
                 method: 'POST',
                 credentials: 'include'
