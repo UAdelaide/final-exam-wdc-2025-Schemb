@@ -3,8 +3,8 @@ const vueinst = Vue.createApp({
     data() {
         return {
             dogImage: '',
-            dogName,
-            dogSize,
+            dogName: 'Charlie',
+            dogSize: '',
             errorMessage: ''
         };
     },
