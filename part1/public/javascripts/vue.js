@@ -8,8 +8,8 @@ const vueinst = Vue.createApp({
     methods: {
         async fetchDog() {
             await fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'GET',
-            })
+                method: 'GET'
+            });
         }
     }
 }).mount('body');
