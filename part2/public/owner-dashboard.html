@@ -146,8 +146,8 @@
       },
       async mounted() {
         try {
-          fetch('/api/users/logout', {
-              method: 'POST',
+          fetch('/api/users/fetchDogs', {
+              method: 'GET',
               credentials: 'include'
           });
         } catch (error) {
