@@ -29,6 +29,7 @@ const vueinst = Vue.createApp({
                 this.errorMessage = 'Could not fetch dog of the day. Please bring more treats.';
             }
         }
-    }
+    },
+    async mounted()
 }).mount('body');
 window.vm = vueinst;
