@@ -9,11 +9,11 @@ const vueinst = Vue.createApp({
         async fetchDog() {
             await fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'GET'
-                body: JSON.stringify({
+                headers: JSON.stringify({
                         username: this.username,
                         email: this.email,
                         password: this.password
-                )
+                })
             });
         }
     }
