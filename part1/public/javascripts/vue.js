@@ -97,11 +97,6 @@ const vueinst = Vue.createApp({
         } catch (err) {
             console.error('Failed to check session:', err);
         }
-    },
-    computed: {
-    profileLink() {
-      return this.loggedIn ? 'profile.html' : 'signin.html';
-    }
     }
 }).mount('body');
 window.vm = vueinst;
