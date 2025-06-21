@@ -13,7 +13,6 @@ const vueinst = Vue.createApp({
                     headers: JSON.stringify({
                             message: this.dogImage,
                             email: this.email,
-                            password: this.password
                     })
                 });
 
