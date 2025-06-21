@@ -9,7 +9,7 @@
 
 <body>
     <h1>Dog of the day!</h1>
-    <p>Move your mouse up to go down and to the left to go right to see the image on the right</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Move your mouse up to go down and to the left to go right to see the image</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <img style="margin-left: 10000px;" :src="dogImage || '/images/cat.png'" alt="Dog of the day" height="300" title="Dog of the day">
     <div v-if="dogImage != ''">
         <p>Dog name: {{ dogName }}</p>
