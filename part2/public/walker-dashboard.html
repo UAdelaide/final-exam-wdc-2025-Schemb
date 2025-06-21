@@ -92,7 +92,7 @@
       },
       methods: {
         async logout() {
-            await fetch('/logout', {
+            await fetch('/users/logout', {
                 method: 'POST',
                 credentials: 'include'
             });
