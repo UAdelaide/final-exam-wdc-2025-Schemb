@@ -10,7 +10,7 @@
 <body>
     <h1>Dog of the day!</h1>
     <p>Move your mouse up to go down and to the left to go right to see the image</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div style="margin-left: 10000px;">
+    <div style="margin-left: 10000px, padding: auto;">
         <button v-if="viewImage == 0" type="button" class="checkStepOne" @click="viewImage = 1">Would you like to see the image?</button>
         <button v-if="viewImage == 1" type="button" class="checkStepOne" @click="viewImage = 2">Are you sure?</button>
         <button v-if="viewImage == 2" type="button" class="checkStepOne" @click="viewImage = 3">You have one more chance to not see the image.</button>
