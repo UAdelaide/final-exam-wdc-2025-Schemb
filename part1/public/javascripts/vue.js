@@ -5,6 +5,8 @@ const vueinst = Vue.createApp({
 
         };
     },
-    
+    methods: {
+        async
+    }
 }).mount('body');
 window.vm = vueinst;
