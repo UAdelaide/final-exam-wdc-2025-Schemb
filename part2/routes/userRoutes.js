@@ -28,13 +28,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.get('/me', (req, res) => {
-  if (!req.session.user) {
-    return res.status(401).json({ error: 'Not logged in' });
-  }
-  res.json(req.session.user);
-});
-
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
@@ -53,6 +46,13 @@ router.post('/login', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
+});
+
+router.get('/me', (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ error: 'Not logged in' });
+  }
+  res.json(req.session.user);
 });
 
 module.exports = router;
