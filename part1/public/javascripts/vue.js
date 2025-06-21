@@ -1,4 +1,5 @@
 const vueinst = Vue.createApp({
+    // Vue Variables
     data() {
         return {
             dogImage: '',
