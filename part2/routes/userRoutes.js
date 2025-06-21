@@ -3,17 +3,6 @@ const router = express.Router();
 const db = require('../models/db');
 var session = require('express-session');
 
-// Create the express session
-app.use(session({
-  secret: 'DogsAreAwesome',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {
-    secure: false,
-    httpOnly: false
-  }
-}));
-
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
   try {
