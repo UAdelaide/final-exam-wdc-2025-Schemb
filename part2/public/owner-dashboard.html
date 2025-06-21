@@ -134,7 +134,7 @@
       },
       methods: {
         async logout() {
-            await fetch('/users/logout', {
+            await fetch('/api/users/logout', {
                 method: 'POST',
                 credentials: 'include'
             });
