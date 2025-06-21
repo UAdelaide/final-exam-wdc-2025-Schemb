@@ -11,8 +11,8 @@
     <h1>Dog of the day!</h1>
     <p>Move your mouse up to go down and to the left to go right to see the image</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div style="margin-left: 10000px;">
-        <button type="button" class="checkStepOne" @click="toggleUser">Sign Out</button>
-        <img :src="dogImage || '/images/cat.png'" alt="Dog of the day" height="300" title="Dog of the day">
+        <button type="button" class="checkStepOne" @click="viewImage = 1">Would you like to see the image</button>
+        <img v:src="dogImage || '/images/cat.png'" alt="Dog of the day" height="300" title="Dog of the day">
         <p>Scroll back to the left to see the dog name and size</p>
     </div>
     <div v-if="dogImage != ''">
