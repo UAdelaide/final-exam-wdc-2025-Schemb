@@ -3,7 +3,6 @@ const vueinst = Vue.createApp({
     data() {
         return {
             dogImage: '',
-            status: '',
             errorMessage: ''
         };
     },
@@ -21,7 +20,7 @@ const vueinst = Vue.createApp({
 
             const data = await response.json();
             this.dogImage = data.message;
-            this.status = data.status;
+
             this.errorMessage = '';
         } catch (error) {
             this.errorMessage = 'Could not fetch dog of the day. Please bring more treats.';
