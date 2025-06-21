@@ -8,16 +8,15 @@ const vueinst = Vue.createApp({
     methods: {
         async fetchDog() {
             try {
-                
+                await fetch('https://dog.ceo/api/breeds/image/random', {
+                    method: 'GET',
+                    headers: JSON.stringify({
+                            message: this.dogImage,
+                            email: this.email,
+                            password: this.password
+                    })
+                });
             }
-            await fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'GET',
-                headers: JSON.stringify({
-                        message: this.dogImage,
-                        email: this.email,
-                        password: this.password
-                })
-            });
         }
     }
 }).mount('body');
