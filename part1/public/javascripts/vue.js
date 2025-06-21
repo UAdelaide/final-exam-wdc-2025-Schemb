@@ -18,6 +18,7 @@ const vueinst = Vue.createApp({
                 if (!response.ok) {
                     const errorData = await response.json();
                     this.errorMessage = errorData.message || 'An error occurred.';
+                    return;
                 }
 
                 this.errorMessage = '';
