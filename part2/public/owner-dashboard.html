@@ -80,7 +80,8 @@
           dog_id: '',
           requested_time: '',
           duration_minutes: '',
-          location: ''
+          location: '',
+          dogs: []
         });
 
         const walks = ref([]);
@@ -151,7 +152,7 @@
               credentials: 'include'
           });
 
-          
+
         } catch (error) {
           console.log('Could not load dogs.');
         }
