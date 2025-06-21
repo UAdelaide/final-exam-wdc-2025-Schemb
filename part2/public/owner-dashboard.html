@@ -125,7 +125,7 @@
         onMounted(() => {
           loadWalks();
 
-          await fetch('/api/users/logout', {
+          fetch('/api/users/logout', {
               method: 'POST',
               credentials: 'include'
           });
