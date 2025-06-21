@@ -5,7 +5,7 @@ const vueinst = Vue.createApp({
             dogImage: '',
             dogName: 'Charlie',
             dogSize: 'Modest',
-            viewImage
+            viewImage: 0,
             errorMessage: ''
         };
     },
