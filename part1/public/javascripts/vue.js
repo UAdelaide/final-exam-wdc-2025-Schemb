@@ -16,6 +16,8 @@ const vueinst = Vue.createApp({
                             password: this.password
                     })
                 });
+            } catch (error) {
+
             }
         }
     }
