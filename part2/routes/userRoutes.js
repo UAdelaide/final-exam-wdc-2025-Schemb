@@ -82,7 +82,7 @@ router.post('/logout', async (req, res) => {
 
 router.get('/fetchDogs', async (req, res) => {
   const [rows] = await db.query(`
-      SELECT dog_id, username, role FROM Users
+      SELECT Dogs.name FROM Dogs
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
 
