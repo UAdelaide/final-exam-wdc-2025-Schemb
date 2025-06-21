@@ -45,8 +45,9 @@
               }
 
               const data = await response.json();
-              this.userId = data.users.user_id;
-              this.username = data.users.username
+              this.userId = data.user.user_id;
+              this.username = data.user.username;
+              this.role = data.user.roll;
 
               this.errorMessage = '';
           } catch (error) {
