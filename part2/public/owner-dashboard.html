@@ -131,6 +131,18 @@
           error,
           submitWalkRequest
         };
+      },
+      methods: {
+        async toggleUser() {
+            this.loggedIn = false;
+
+            await fetch('/logout', {
+                method: 'POST',
+                credentials: 'include'
+            });
+
+            window.location.href = '/';
+        },
       }
     }).mount('#app');
   </script>
