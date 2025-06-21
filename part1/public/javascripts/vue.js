@@ -16,6 +16,8 @@ const vueinst = Vue.createApp({
                             password: this.password
                     })
                 });
+
+                errorM
             } catch (error) {
                 this.errorMessage = 'Could not fetch dog of the day. Please try again later.';
             }
