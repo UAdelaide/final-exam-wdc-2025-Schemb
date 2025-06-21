@@ -11,7 +11,7 @@ const vueinst = Vue.createApp({
         // Fetch the Dog CEO API
         try {
             const response = await fetch('https://dog.ceo/api/breeds/image/random', {
-                method: 'POST',
+                method: 'GET',
                 body: JSON.stringify({
                         message: this.dogImage
                 })
