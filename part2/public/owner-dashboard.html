@@ -124,11 +124,6 @@
 
         onMounted(() => {
           loadWalks();
-
-          fetch('/api/users/logout', {
-              method: 'POST',
-              credentials: 'include'
-          });
         });
 
         return {
@@ -148,7 +143,8 @@
 
             window.location.href = '/';
         },
-      }
+      },
+      async mounted
     }).mount('#app');
   </script>
 
