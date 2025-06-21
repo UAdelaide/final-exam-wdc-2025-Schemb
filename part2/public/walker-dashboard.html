@@ -84,7 +84,8 @@
               credentials: 'include'
           });
 
-          this.requestId = 
+          const data = await response.json();
+          this.requestId = data.requestId;
         }
 
 
