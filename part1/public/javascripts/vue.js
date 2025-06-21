@@ -7,33 +7,9 @@ const vueinst = Vue.createApp({
     },
     methods: {
         async fetchDog() {
-            await fetch('async handleSignUp() {
-            try {
-                const response = await fetch('/signup', {
-                    method: 'POST',
-                    credentials: 'include',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        username: this.username,
-                        email: this.email,
-                        password: this.password
-                    })
-                });
-
-                if (!response.ok) {
-                    const errorData = await response.json();
-                    this.errorMessage = errorData.message || 'An error occurred.';
-                    return;
-                }
-
-                this.errorMessage = '';
-                window.location.href = '/';
-            } catch (error) {
-                this.errorMessage = 'Server error. Please try again later.';
-            }
-        },')
+            await fetch('https://dog.ceo/api/breeds/image/random', {
+                
+            })
         }
     }
 }).mount('body');
