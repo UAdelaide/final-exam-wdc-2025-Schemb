@@ -12,7 +12,24 @@
   <div id="app" class="container py-5">
     <h1 class="mb-4 text-primary">{{ message }}</h1>
 
-    
+    <form @submit.prevent="handleSignIn">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input v-model="username" type="text" placeholder="John Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input v-model="password" type="password" placeholder="••••••••" required>
+      </div>
+
+      <button type="submit" class="signin-btn">Sign In</button>
+      <p class="error-message" v-if="errorMessage">{{ errorMessage }}</p>
+
+      <div class="extra-links">
+        <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
+      </div>
+    </form>
   </div>
 
   <script>
