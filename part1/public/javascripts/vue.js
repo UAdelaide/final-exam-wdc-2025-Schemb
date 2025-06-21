@@ -6,6 +6,7 @@ const vueinst = Vue.createApp({
             errorMessage: ''
         };
     },
+    // Run when vue loads
     async mounted() {
         // Fetch the Dog CEO API
         try {
