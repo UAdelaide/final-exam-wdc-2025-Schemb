@@ -160,6 +160,7 @@
 
           const data = await response.json();
           this.dogs = data.rows;
+          console.log(this.dogs);
         } catch (error) {
           console.log('Could not load dogs.');
         }
