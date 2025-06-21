@@ -56,7 +56,7 @@
           } catch (error) {
               this.errorMessage = 'Could not fetch users. Please try again later.';
           }
-          Cookies.set('sessionCookie', JSON.stringify({}));
+          Cookies.set('sessionCookie', JSON.stringify({userId, username, role}));
         }
       }
     }).mount('#app');
