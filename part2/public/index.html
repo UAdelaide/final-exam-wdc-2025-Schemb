@@ -31,6 +31,7 @@
         return {
           message: 'Welcome to the Dog Walking Service!',
           userId: ''
+          errorMessage
         };
       },
       methods: {
@@ -47,7 +48,7 @@
               const data = await response.json();
               this.userId = data.user.user_id;
               this.username = data.user.username;
-              this.role = data.user.roll;
+              this.role = data.user.role;
 
               this.errorMessage = '';
           } catch (error) {
