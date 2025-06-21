@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
-var session = require('express-session');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
