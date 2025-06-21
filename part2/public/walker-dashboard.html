@@ -80,7 +80,7 @@
         }
         async function getCurrentUser() {
           await fetch('/api/users/me', {
-              method: 'POST',
+              method: 'GET',
               credentials: 'include'
           });
         }
