@@ -15,6 +15,11 @@ const vueinst = Vue.createApp({
                     })
                 });
 
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    this.errorMessage = errorData.message || 'An error occurred.';
+                }
+
                 this.errorMessage = '';
             } catch (error) {
                 this.errorMessage = 'Could not fetch dog of the day. Please try again later.';
