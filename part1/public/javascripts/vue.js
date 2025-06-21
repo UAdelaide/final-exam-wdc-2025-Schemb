@@ -13,10 +13,10 @@ const vueinst = Vue.createApp({
         try {
             const response = await fetch('https://dog.ceo/api/breeds/image/random', {
                 method: 'GET',
-                body: JSON.stringify({
+                body: {
                         dogImage: this.message,
                         status: this.status
-                })
+                }
             });
 
             if (!response.ok) {
