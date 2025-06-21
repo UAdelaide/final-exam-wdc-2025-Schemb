@@ -36,7 +36,7 @@
       methods: {
         async login() {
           try {
-              const response = await fetch('/');
+              const response = await fetch('/api/users');
 
               if (!response.ok) {
                   const errorData = await response.json();
