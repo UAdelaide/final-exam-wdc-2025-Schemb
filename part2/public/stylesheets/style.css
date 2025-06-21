@@ -163,3 +163,8 @@ section {
     margin: 0 0.2em;
     color: white;
 }
+
+.right {
+    flex: auto;
+    float: right;
+}
