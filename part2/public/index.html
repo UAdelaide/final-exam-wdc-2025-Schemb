@@ -45,8 +45,8 @@
               }
 
               const data = await response.json();
-              this.userId = data.message;
-              this.username = data.users.
+              this.userId = data.users.user_id;
+              this.username = data.users.username
 
               this.errorMessage = '';
           } catch (error) {
