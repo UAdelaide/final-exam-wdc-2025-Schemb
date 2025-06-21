@@ -1,11 +1,12 @@
 const vueinst = Vue.createApp({
-    // Vue Variables
+    // Vue variables
     data() {
         return {
             dogImage: '',
             errorMessage: ''
         };
     },
+    // Vue functions
     methods: {
         async fetchDog() {
             try {
